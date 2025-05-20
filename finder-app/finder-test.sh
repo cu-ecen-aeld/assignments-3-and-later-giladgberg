@@ -51,10 +51,15 @@ fi
 #echo "Removing the old writer utility and compiling as a native application"
 #make clean
 #make
+echo "Cleaning previous build..."
+rm -f writer
+
+echo "Compiling writer.c..."
+gcc -Wall -Werror -o writer writer.c
 
 for i in $( seq 1 $NUMFILES)
 do
-	./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+	./writer  "$WRITEDIR/${username}$i.txt" "$WRITESTR"
 done
 
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
