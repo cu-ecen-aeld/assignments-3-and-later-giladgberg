@@ -51,11 +51,11 @@ fi
 #echo "Removing the old writer utility and compiling as a native application"
 #make clean
 #make
-echo "Cleaning previous build..."
-rm -f writer
+# echo "Cleaning previous build..."
+# rm -f writer
 
-echo "Compiling writer.c..."
-gcc -Wall -Werror -o writer writer.c
+# echo "Compiling writer.c..."
+# gcc -Wall -Werror -o writer writer.c
 
 for i in $( seq 1 $NUMFILES)
 do
