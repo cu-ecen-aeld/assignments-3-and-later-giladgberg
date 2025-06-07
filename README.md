@@ -34,3 +34,4 @@ add line
 add line
 add line
 Another test line
+line and makefile
